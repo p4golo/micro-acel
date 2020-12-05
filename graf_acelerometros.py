@@ -43,6 +43,16 @@ def main():
                     maximoy = max(maximoy,(readings[k][1]))
                     maximoz = max(maximoz, (readings[k][2]))
                 display.scroll(" "+str(maximox)+" " + str(maximoy)+ " " + str(maximoz))
+            if button_b.is_pressed():
+                minimox = 2000
+                minimoy = 2000
+                minimoz = 2000
+                for k in range(MAX):
+                    minimox= min(minimox,(readings[k][0]))
+                    minimoy = min(minimoy,(readings[k][1]))
+                    minimoz = min(minimoz, (readings[k][2]))
+                display.scroll(" "+str(minimox)+" " + str(minimoy)+ " " + str(minimoz))
+
 
 if __name__ == "__main__":
     main()
